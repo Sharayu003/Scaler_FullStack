@@ -8,6 +8,7 @@ function prepareIngredients(callback){
 function cookDish(callback){
     setTimeout(function(){
         console.log("Dish cooked");
+        callback();
     }, 10000);
 }
 
@@ -36,7 +37,10 @@ function giveFeedback(callback){
 prepareIngredients(function(){
     cookDish(function(){
         serveDish(function(){
-            cleanUp()
+            giveFeedback(function(){
+                cleanUp()
+            })
+            
         })
     })
 })
