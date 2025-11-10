@@ -1,0 +1,25 @@
+[
+    {
+        "name" : "Sai",
+        "vegetables" : ["Tomato", "potato"],
+        "Diary": ["milk","Cheese"],
+        "isPaymentDone": true,
+        "Amount" : 1000
+    },
+
+     {
+        "name" : "Shail",
+        "vegetables" : ["Tomato", "potato"],
+        "Diary": ["milk","Cheese"],
+        "isPaymentDone": true,
+        "Amount" : 1000
+    },
+
+     {
+        "name" : "Mayur",
+        "vegetables" : ["Tomato", "potato"],
+        "Diary": ["milk","Cheese"],
+        "isPaymentDone": true,
+        "Amount" : 1000
+    }
+]
