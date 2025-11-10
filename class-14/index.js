@@ -21,16 +21,25 @@ function serveDish(callback){
 
 
 
-function cleanUp(){// this is our last function it wont't need callback
+function cleanUp(callback){// this is our last function it wont't need callback
     setTimeout(function(){
         console.log("Cleaning up");
-        callback()
+        callback();
     },5000);
+}
+
+function inspection(callback){
+    setTimeout(function(){
+        console.log("Inspecting platform");
+       
+    },1000);
+
 }
 
 function giveFeedback(callback){
     setTimeout(function(){
         console.log("Feedback given");
+        callback();
     },500);
 }
 
@@ -38,7 +47,9 @@ prepareIngredients(function(){
     cookDish(function(){
         serveDish(function(){
             giveFeedback(function(){
-                cleanUp()
+                inspection(function(){
+                    cleanUp()
+                })
             })
             
         })
