@@ -88,6 +88,7 @@ body{
     height: 12rem;
     width: 15rem;
     background-color:coral;
+    border: 2px solid black;
 }
 
 .main-cont{
@@ -110,10 +111,46 @@ body{
 
 .ticket-lock{
     display: flex;
-    justify-content: end;
-    margin-top: 6rem;
+    position: fixed;
+    top : 16rem;
     font-size: 1.5rem;
-    margin-right: 1rem;
+    left : 30rem;
+}
+
+/* modal Pop up */
+
+.modal-cont{
+    display: flex;
+    height: 50vh; /*vh = view height */
+    width: 45vw; /*wh = view width */
+    background-color: #dfe4ea;
+    position: absolute;
+    top: 30%;
+    left: 27%;
+}
+
+.textArea-cont{
+    height: 100%;
+    width: 70%;
+    resize: none;
+    outline : none;
+    font-size: 2rem;
+}
+
+.priority-color-container{
+
+    background-color: #4b4b4b;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.priority-color{
+    height : 3rem;
+    width: 5rem;
 }
 
 
