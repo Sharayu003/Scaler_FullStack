@@ -1,157 +1,211 @@
-*{
-    box-sizing:border-box;
-    
+/* Reset and Box-Sizing */
+* {
+    box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-.toolbox-cont{
-    background-color:#4b4b4b;
+/* ==============================
+   TOOLBOX (Header)
+============================== */
+.toolbox-cont {
+    background-color: #4b4b4b;
     height: 5rem;
     display: flex;
     align-items: center;
-    
+    padding: 0 2rem;
 }
 
-.toolbox-priority-cont{
+.toolbox-priority-cont {
     background-color: #3d3d3d;
     height: 3.5rem;
     width: 18rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border-radius: 5px;
 }
 
-.color-box{
+.color-box {
     height: 1.5rem;
     width: 3rem;
-    background-color: black;
-    
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid #222;
 }
 
-.lightpink{
+/* Priority Colors */
+.lightpink {
     background-color: lightpink;
-
 }
 
-.lightblue{
+.lightblue {
     background-color: lightblue;
 }
 
-.lightgreen{
+.lightgreen {
     background-color: lightgreen;
 }
 
-.black{
+.black {
     background-color: black;
 }
 
-.action-btn-cont{
+/* ==============================
+   ACTION BUTTONS
+============================== */
+.action-btn-cont {
     height: 3.5rem;
     width: 8rem;
     background-color: #3d3d3d;
-    margin-left: 4rem;
+    margin-left: 3rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     border: 1px solid black;
+    border-radius: 5px;
 }
 
-.action-btn-cont>*{
+.action-btn-cont > * {
     display: flex;
-    color:white;
+    color: white;
     font-size: 2rem;
-    width:50%;
+    width: 50%;
     align-items: center;
     justify-content: center;
-
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
-.add-btn:hover{
-    background-color:#4bb543;
-    font-size: 3.5rem;
-
+.add-btn:hover {
+    background-color: #4bb543;
+    font-size: 2.5rem;
 }
 
-.remove-btn:hover{
+.remove-btn:hover {
     background-color: red;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 
-/* Ticket Design */
-
-.ticket-cont{
-    height: 12rem;
-    width: 15rem;
-    background-color:coral;
-    border: 2px solid black;
-}
-
-.main-cont{
+/* ==============================
+   MAIN CONTENT (Tickets Section)
+============================== */
+.main-cont {
     display: flex;
+   
     gap: 2rem;
     justify-content: center;
     padding: 2rem;
-
 }
 
-.ticket-color{
+/* Ticket Box */
+.ticket-cont {
+    position: relative;
+    height: 12rem;
+    width: 15rem;
+    background-color: coral;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ticket Header Color Bar */
+.ticket-color {
     height: 1rem;
-
+    width: 100%;
+    border-radius: 3px;
 }
 
-.ticket-id{
+/* Ticket ID Section */
+.ticket-id {
     height: 2rem;
     background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 3px;
 }
 
-.ticket-lock{
-    display: flex;
-    position: fixed;
-    top : 16rem;
-    font-size: 1.5rem;
-    left : 30rem;
+/* Ticket Task Text */
+.ticket-task {
+    flex-grow: 1;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    overflow-wrap: break-word;
 }
 
-/* modal Pop up */
+/* Lock Icon (Fixed Inside Ticket) */
+.ticket-lock {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #2f3542;
+    transition: transform 0.2s ease;
+}
 
-.modal-cont{
+.ticket-lock:hover {
+    transform: scale(1.2);
+    color: black;
+}
+
+/* ==============================
+   MODAL POPUP (Task Creation)
+============================== */
+.modal-cont {
     display: flex;
-    height: 50vh; /*vh = view height */
-    width: 45vw; /*wh = view width */
+    height: 50vh; /* viewport height */
+    width: 45vw; /* viewport width */
     background-color: #dfe4ea;
     position: absolute;
     top: 30%;
     left: 27%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.textArea-cont{
+/* Textarea Section */
+.textArea-cont {
     height: 100%;
     width: 70%;
     resize: none;
-    outline : none;
-    font-size: 2rem;
+    outline: none;
+    font-size: 1.5rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px 0 0 10px;
 }
 
-.priority-color-container{
-
+/* Priority Color Selection */
+.priority-color-container {
     background-color: #4b4b4b;
     width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
+    border-radius: 0 10px 10px 0;
 }
 
-.priority-color{
-    height : 3rem;
+.priority-color {
+    height: 3rem;
     width: 5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
 }
 
-
-
+.active{
+    border : 5px solid lightsalmon;
+}
